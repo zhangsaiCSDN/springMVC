@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 
+		映射器处理器
+		1. 接受：请求url
+		2. 返回：handler(暂时理解为controller)
+	 -->
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+	
+	<!-- 
+		适配器处理器 
+		1. 接受： 接受handler
+		2. 返回： ModelAndView
+	-->
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+	
+	<!-- 
+		视图解析器
+		1. 接受： 接受ModelAndView
+		2. 返回：物理视图
+	-->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<!-- 配置控制器 -->
+	<bean id="/user.do" class="com.woniuxy.a_hello.UserController"></bean>
+
+</beans>
