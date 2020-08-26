@@ -3,7 +3,9 @@ springmvc环境搭建步骤：
 	spring-webmvc
 	servlet
 	jstl
+
 	 !!!!!!!!!!!!!呵呵
+
 2. 在web.xml中，添加springmvc的前端控制器的配置
 	<servlet>
 		<servlet-name>DispatcherServlet</servlet-name>
