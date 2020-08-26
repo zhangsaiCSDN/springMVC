@@ -3,7 +3,7 @@ springmvc环境搭建步骤：
 	spring-webmvc
 	servlet
 	jstl
-	 ？？？？？
+	 !!!!!!!!!!!
 2. 在web.xml中，添加springmvc的前端控制器的配置
 	<servlet>
 		<servlet-name>DispatcherServlet</servlet-name>
@@ -18,7 +18,7 @@ springmvc环境搭建步骤：
 		<servlet-name>DispatcherServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-	该前端控制器的作用是：
+	该前端控制器的作用是：=========
 	a. 专门拦截以“.do”结尾的请求。
 	b. 拦截到请求以后，就会进行请求的分发。
 	c. 可以看出，这个springmvc的前端控制器就是一个Servlet！！
