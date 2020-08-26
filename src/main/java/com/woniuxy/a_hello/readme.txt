@@ -1,10 +1,10 @@
-springmvc»·¾³´î½¨²½Öè£º
-1. µ¼ÈëÒÀÀµ£º
+springmvcçŽ¯å¢ƒæ­å»ºæ­¥éª¤ï¼š
+1. å¯¼å…¥ä¾èµ–ï¼š
 	spring-webmvc
 	servlet
 	jstl
 	
-2. ÔÚweb.xmlÖÐ£¬Ìí¼ÓspringmvcµÄÇ°¶Ë¿ØÖÆÆ÷µÄÅäÖÃ
+2. åœ¨web.xmlä¸­ï¼Œæ·»åŠ springmvcçš„å‰ç«¯æŽ§åˆ¶å™¨çš„é…ç½®
 	<servlet>
 		<servlet-name>DispatcherServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -18,22 +18,22 @@ springmvc»·¾³´î½¨²½Öè£º
 		<servlet-name>DispatcherServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-	¸ÃÇ°¶Ë¿ØÖÆÆ÷µÄ×÷ÓÃÊÇ£º
-	a. ×¨ÃÅÀ¹½ØÒÔ¡°.do¡±½áÎ²µÄÇëÇó¡£
-	b. À¹½Øµ½ÇëÇóÒÔºó£¬¾Í»á½øÐÐÇëÇóµÄ·Ö·¢¡£
-	c. ¿ÉÒÔ¿´³ö£¬Õâ¸öspringmvcµÄÇ°¶Ë¿ØÖÆÆ÷¾ÍÊÇÒ»¸öServlet£¡£¡
-	   ServletÖ»ÓÐÔÚµÚÒ»´Î±»ÇëÇóÊ±£¬²Å»á±»ÊµÀý»¯³öÀ´£¡£¡ ¶øÊµÀý»¯DispatcherServletÊ±£¬
-	   DispatcherServlet¾Í»áÈ¥´´½¨spring iocÈÝÆ÷£¬²¢°Ñ¸ÃiocÈÝÆ÷´æÈëapplicationÖÐ£¡
-	   £¨ÕâÇ¡Ç¡¾ÍÊÇssh»·¾³ÖÐµÄContextLoaderListener¼àÌýÆ÷×öµÄÊÂÇé£©
-	       ËùÒÔ£¬±ØÐë¸æËßDispatcherServlet£¬springµÄÅäÖÃÎÄ¼þÔÚÄÄ£¬±Ï¾¹´´½¨spring iocÈÝÆ÷µÄÊ±ºò£¬Ò»¶¨Òª¼ÓÔØspringµÄÅäÖÃÎÄ¼þ£¡
+	è¯¥å‰ç«¯æŽ§åˆ¶å™¨çš„ä½œç”¨æ˜¯ï¼š
+	a. ä¸“é—¨æ‹¦æˆªä»¥â€œ.doâ€ç»“å°¾çš„è¯·æ±‚ã€‚
+	b. æ‹¦æˆªåˆ°è¯·æ±‚ä»¥åŽï¼Œå°±ä¼šè¿›è¡Œè¯·æ±‚çš„åˆ†å‘ã€‚
+	c. å¯ä»¥çœ‹å‡ºï¼Œè¿™ä¸ªspringmvcçš„å‰ç«¯æŽ§åˆ¶å™¨å°±æ˜¯ä¸€ä¸ªServletï¼ï¼
+	   Servletåªæœ‰åœ¨ç¬¬ä¸€æ¬¡è¢«è¯·æ±‚æ—¶ï¼Œæ‰ä¼šè¢«å®žä¾‹åŒ–å‡ºæ¥ï¼ï¼ è€Œå®žä¾‹åŒ–DispatcherServletæ—¶ï¼Œ
+	   DispatcherServletå°±ä¼šåŽ»åˆ›å»ºspring iocå®¹å™¨ï¼Œå¹¶æŠŠè¯¥iocå®¹å™¨å­˜å…¥applicationä¸­ï¼
+	   ï¼ˆè¿™æ°æ°å°±æ˜¯sshçŽ¯å¢ƒä¸­çš„ContextLoaderListenerç›‘å¬å™¨åšçš„äº‹æƒ…ï¼‰
+	       æ‰€ä»¥ï¼Œå¿…é¡»å‘Šè¯‰DispatcherServletï¼Œspringçš„é…ç½®æ–‡ä»¶åœ¨å“ªï¼Œæ¯•ç«Ÿåˆ›å»ºspring iocå®¹å™¨çš„æ—¶å€™ï¼Œä¸€å®šè¦åŠ è½½springçš„é…ç½®æ–‡ä»¶ï¼
 	       
-	²¹³ä£¬Èç¹ûÔÚÅäÖÃservletµÄÊ±ºò£¬¼ÓÉÏÁË
+	è¡¥å……ï¼Œå¦‚æžœåœ¨é…ç½®servletçš„æ—¶å€™ï¼ŒåŠ ä¸Šäº†
 		<load-on-startup>1</load-on-startup>
-	servlet¾Í»áÔÚwebÓ¦ÓÃ±»²¿ÊðµÄÊ±ºò£¬¾ÍÖ±½Ó±»ÊµÀý»¯³öÀ´£¡
+	servletå°±ä¼šåœ¨webåº”ç”¨è¢«éƒ¨ç½²çš„æ—¶å€™ï¼Œå°±ç›´æŽ¥è¢«å®žä¾‹åŒ–å‡ºæ¥ï¼
 	
-3. ´´½¨Ò»¸öUserController£¬×¢ÒâspringmvcÖÐµÄ¿ØÖÆÆ÷ÃüÃû¶¼ÊÇÒÔ"Controller"½áÎ²£¡
+3. åˆ›å»ºä¸€ä¸ªUserControllerï¼Œæ³¨æ„springmvcä¸­çš„æŽ§åˆ¶å™¨å‘½åéƒ½æ˜¯ä»¥"Controller"ç»“å°¾ï¼
 	
-	¾ÍÄ¿Ç°¶øÑÔ£¬springmvcµÄ¿ØÖÆÆ÷£¬±ØÐëÊµÏÖController½Ó¿Ú£¡ ·ñÔò¸ÃÀà¾Í²»ÊÇspringmvcµÄ¿ØÖÆÆ÷ÀàÁË£¡
+	å°±ç›®å‰è€Œè¨€ï¼Œspringmvcçš„æŽ§åˆ¶å™¨ï¼Œå¿…é¡»å®žçŽ°ControlleræŽ¥å£ï¼ å¦åˆ™è¯¥ç±»å°±ä¸æ˜¯springmvcçš„æŽ§åˆ¶å™¨ç±»äº†ï¼
 	public class UserController implements Controller {
 		public UserController() {
 			System.out.println("UserController.UserController()");
@@ -47,46 +47,47 @@ springmvc»·¾³´î½¨²½Öè£º
 		}
 	}
 	
-4. ´´½¨springmvcµÄÖ÷ÅäÖÃÎÄ¼þ£¬½¨Òé½Ð×ö:spring-servlet.xml£¬ÄÚÈÝÈçÏÂ£º
+4. åˆ›å»ºspringmvcçš„ä¸»é…ç½®æ–‡ä»¶ï¼Œå»ºè®®å«åš:spring-servlet.xmlï¼Œå†…å®¹å¦‚ä¸‹ï¼š
 	<?xml version="1.0" encoding="UTF-8"?>
 	<beans xmlns="http://www.springframework.org/schema/beans"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
-		<!-- Ó³ÉäÆ÷´¦ÀíÆ÷ -->
+		<!-- æ˜ å°„å™¨å¤„ç†å™¨ -->
 		<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
 		
-		<!-- ÊÊÅäÆ÷´¦ÀíÆ÷ -->
+		<!-- é€‚é…å™¨å¤„ç†å™¨ -->
 		<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
 		
-		<!-- ÊÓÍ¼½âÎöÆ÷ -->
+		<!-- è§†å›¾è§£æžå™¨ -->
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 			<property name="prefix" value="/" />
 			<property name="suffix" value=".jsp" />
 		</bean>
 		
-		<!-- ÅäÖÃ¿ØÖÆÆ÷ -->
+		<!-- é…ç½®æŽ§åˆ¶å™¨ -->
 		<bean id="/user.do" class="com.woniuxy.a_hello.UserController"></bean>
 	
 	</beans>
 	
 	
-5. ²âÊÔ£º
-	´ò¿ªä¯ÀÀÆ÷£¬http://localhost/springmvc/user.do
+5. æµ‹è¯•ï¼š
+	æ‰“å¼€æµè§ˆå™¨ï¼Œhttp://localhost/springmvc/user.do
 
 =============================================================================================
+=================
 
-springmvcÔËÐÐÔ­Àí£º £¨²»ÐèÒªËÀ¼ÇÓ²±³£¬ Ó¦¸Ã½áºÏÁ÷³ÌÍ¼±³³öÔ­Àí£©
-1. ¿Í»§¶Ë·¢ÆðÇëÇó£¬¸ÃÇëÇó±»springmvcµÄÇ°¶Ë¿ØÖÆÆ÷À¹½Ø×¡£¨DispatcherServlet£©
-2. Ç°¶Ë¿ØÖÆÆ÷°ÑÀ¹½Ø×¡µÄÇëÇó£¬×ª·¢¸øÓ³ÉäÆ÷´¦ÀíÆ÷¡£ 
-3. Ó³ÉäÆ÷´¦ÀíÆ÷½ÓÊÜµ½ÇëÇóÖ®ºó£¬¾Í»á¸ù¾ÝÇëÇó£¬À´ÕÒµ½Ò»¸ö¾ßÌåµÄhandler(ÔÝÊ±Àí½âÎªcontroller)
-4. Ó³ÉäÆ÷´¦ÀíÆ÷°ÑÕÒµ½µÄhandler(ÔÝÊ±Àí½âÎªcontroller)£¬ÔÙ½»¸øÇ°¶Ë¿ØÖÆ¡£
-5. Ç°¶Ë¿ØÖÆÆ÷°Ñ½ÓÊÜµ½µÄhandler£¬ÔÙ½»¸øÊÊÅäÆ÷´¦ÀíÆ÷¡£
-6. ÊÊÅäÆ÷´¦ÀíÆ÷¸ºÔðÖ´ÐÐËù½ÓÊÜµ½µÄhandler£¬¾Í»áµÃµ½Ò»¸öModelAndView£¬ModelAndView¶ÔÏóÖÐ·â×°ÁËÂß¼­ÊÓÍ¼
-         ÊÊÅäÆ÷´¦ÀíÆ÷ÔÙ°ÑModelAndView¶ÔÏó´«¸øÇ°¶Ë¿ØÖÆÆ÷¡£
-7. Ç°¶Ë¿ØÖÆÆ÷½ÓÊÕµ½ModelAndView£¬ÔÙ½»¸øÊÓÍ¼½âÎöÆ÷¡£
-8. ÊÓÍ¼½âÎöÆ÷½ÓÊÜµ½ModelAndView£¬¾Í»áÈ¡³öÆäÖÐµÄÂß¼­ÊÓÍ¼£¬²¢½âÎöÎªÎïÀíÊÓÍ¼£¬ÔÙ°ÑµÃµ½µÄÎïÀíÊÓÍ¼½»¸øÇ°¶Ë¿ØÖÆÆ÷
-9. Ç°¶Ë¿ØÖÆÆ÷ÔÙÏò¿Í»§¶Ë×ö³öÏìÓ¦£¡
+springmvcè¿è¡ŒåŽŸç†ï¼š ï¼ˆä¸éœ€è¦æ­»è®°ç¡¬èƒŒï¼Œ åº”è¯¥ç»“åˆæµç¨‹å›¾èƒŒå‡ºåŽŸç†ï¼‰
+1. å®¢æˆ·ç«¯å‘èµ·è¯·æ±‚ï¼Œè¯¥è¯·æ±‚è¢«springmvcçš„å‰ç«¯æŽ§åˆ¶å™¨æ‹¦æˆªä½ï¼ˆDispatcherServletï¼‰
+2. å‰ç«¯æŽ§åˆ¶å™¨æŠŠæ‹¦æˆªä½çš„è¯·æ±‚ï¼Œè½¬å‘ç»™æ˜ å°„å™¨å¤„ç†å™¨ã€‚ 
+3. æ˜ å°„å™¨å¤„ç†å™¨æŽ¥å—åˆ°è¯·æ±‚ä¹‹åŽï¼Œå°±ä¼šæ ¹æ®è¯·æ±‚ï¼Œæ¥æ‰¾åˆ°ä¸€ä¸ªå…·ä½“çš„handler(æš‚æ—¶ç†è§£ä¸ºcontroller)
+4. æ˜ å°„å™¨å¤„ç†å™¨æŠŠæ‰¾åˆ°çš„handler(æš‚æ—¶ç†è§£ä¸ºcontroller)ï¼Œå†äº¤ç»™å‰ç«¯æŽ§åˆ¶ã€‚
+5. å‰ç«¯æŽ§åˆ¶å™¨æŠŠæŽ¥å—åˆ°çš„handlerï¼Œå†äº¤ç»™é€‚é…å™¨å¤„ç†å™¨ã€‚
+6. é€‚é…å™¨å¤„ç†å™¨è´Ÿè´£æ‰§è¡Œæ‰€æŽ¥å—åˆ°çš„handlerï¼Œå°±ä¼šå¾—åˆ°ä¸€ä¸ªModelAndViewï¼ŒModelAndViewå¯¹è±¡ä¸­å°è£…äº†é€»è¾‘è§†å›¾
+         é€‚é…å™¨å¤„ç†å™¨å†æŠŠModelAndViewå¯¹è±¡ä¼ ç»™å‰ç«¯æŽ§åˆ¶å™¨ã€‚
+7. å‰ç«¯æŽ§åˆ¶å™¨æŽ¥æ”¶åˆ°ModelAndViewï¼Œå†äº¤ç»™è§†å›¾è§£æžå™¨ã€‚
+8. è§†å›¾è§£æžå™¨æŽ¥å—åˆ°ModelAndViewï¼Œå°±ä¼šå–å‡ºå…¶ä¸­çš„é€»è¾‘è§†å›¾ï¼Œå¹¶è§£æžä¸ºç‰©ç†è§†å›¾ï¼Œå†æŠŠå¾—åˆ°çš„ç‰©ç†è§†å›¾äº¤ç»™å‰ç«¯æŽ§åˆ¶å™¨
+9. å‰ç«¯æŽ§åˆ¶å™¨å†å‘å®¢æˆ·ç«¯åšå‡ºå“åº”ï¼
 
 	
 	
